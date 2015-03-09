@@ -9,7 +9,7 @@ class Bike < Station
       s = Station.find_or_create_by(terminalName: station["terminalName"].to_i)
       s.update! type: "Bike", name: station["name"], lat: station["lat"], long: station["long"], bikes: station["nbBikes"], empty: station["nbEmptyDocks"]    
     end
-      
   end
+
 
 end
