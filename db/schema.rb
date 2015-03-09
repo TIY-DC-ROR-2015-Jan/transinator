@@ -11,13 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309154455) do
+ActiveRecord::Schema.define(version: 20150309200457) do
 
   create_table "stations", force: :cascade do |t|
     t.string   "type"
     t.string   "api_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "terminalName"
+    t.string   "lat"
+    t.string   "long"
+    t.integer  "bikes"
+    t.integer  "empty"
+    t.string   "name"
   end
 
   create_table "user_stations", force: :cascade do |t|
@@ -38,10 +44,11 @@ ActiveRecord::Schema.define(version: 20150309154455) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "location"
     t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "lat"
+    t.string   "long"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
