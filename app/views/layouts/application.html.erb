@@ -7,6 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+	<header class="center">Transinator</header>
+
+	<div class="center row"> 
+
+		<div class="headerLink cell columns3">
+			<a href="/home">Home</a>
+		</div>
+
+		<div class="headerLink cell columns3">
+			<a href="/dashboard">Dashboard</a>
+		</div>
+
+		<div class="headerLink cell columns3">
+			<a href="/stations">Add a new station</a>
+		</div>
+
+	</div>
+
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= yield %>

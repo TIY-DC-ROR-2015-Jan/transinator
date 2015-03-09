@@ -490,3 +490,1676 @@ ActionController::RoutingError (No route matches [GET] "/dashboard/old"):
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.7ms)
+
+
+Started GET "/" for ::1 at 2015-03-09 13:42:00 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 13:42:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 13:42:00 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-09 13:42:00 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 13:42:00 -0400
+
+
+Started GET "/index" for ::1 at 2015-03-09 13:46:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/index.html" for ::1 at 2015-03-09 13:46:57 -0400
+
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.4ms)
+
+
+Started GET "/home.html" for ::1 at 2015-03-09 13:47:03 -0400
+
+ActionController::RoutingError (No route matches [GET] "/home.html"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/home.html" for ::1 at 2015-03-09 13:47:07 -0400
+
+ActionController::RoutingError (No route matches [GET] "/home.html"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/home" for ::1 at 2015-03-09 13:47:14 -0400
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (52.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (115.7ms)
+
+
+Started GET "/stations" for ::1 at 2015-03-09 13:47:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stations"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-09 13:48:48 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-09 13:48:48 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 13:48:48 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 13:48:48 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 13:48:48 -0400
+
+
+Started GET "/stations" for ::1 at 2015-03-09 13:49:01 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stations"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-09 13:49:58 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 13:49:58 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-03-09 13:49:58 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 13:49:58 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 13:49:58 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:13:01 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-fd750861b6fba56b1115cc286deae46d.css?body=1" for ::1 at 2015-03-09 14:13:01 -0400
+
+
+Started GET "/assets/application-33d811f5bb1e9b18861b12571b4c7037.css?body=1" for ::1 at 2015-03-09 14:13:01 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:13:01 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:13:01 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:13:01 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:13:45 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-c364aa4c5871bcdb03cc5f10a1b083d4.css?body=1" for ::1 at 2015-03-09 14:13:46 -0400
+
+
+Started GET "/assets/style-9e2cbb10e319f1db782dd549de11cc7a.css?body=1" for ::1 at 2015-03-09 14:13:46 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:13:46 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:13:46 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:13:46 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:13:59 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 80ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-f766126bcd13069829e2940e49494683.css?body=1" for ::1 at 2015-03-09 14:13:59 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:13:59 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:13:59 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:13:59 -0400
+
+
+Started GET "/assets/application-d52358bf50b2f64c068932a3e6f63b7a.css?body=1" for ::1 at 2015-03-09 14:13:59 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:15:09 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-9a81bf18b76deb6a9e0d5e239b6c5ca5.css?body=1" for ::1 at 2015-03-09 14:15:09 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:15:09 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:15:09 -0400
+
+
+Started GET "/assets/application-0f0fbd97c5eba0d27b1fa72d9ed09a6f.css?body=1" for ::1 at 2015-03-09 14:15:09 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:15:09 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:15:32 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:15:32 -0400
+
+
+Started GET "/assets/style-6e7cf996868488eab4c8c9916543636a.css?body=1" for ::1 at 2015-03-09 14:15:32 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:15:32 -0400
+
+
+Started GET "/assets/application-bd5582896113ed8a6d00814f1a2b6fcc.css?body=1" for ::1 at 2015-03-09 14:15:32 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:15:32 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:18:33 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 102ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:18:33 -0400
+
+
+Started GET "/assets/style-218e785882269cec2a02be0b6f105fbb.css?body=1" for ::1 at 2015-03-09 14:18:33 -0400
+
+
+Started GET "/assets/application-85f35e5700f3f5eace72ca7717726c83.css?body=1" for ::1 at 2015-03-09 14:18:33 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:18:33 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:18:33 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:19:04 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-0ff24ec5d8fe7d2699528bbfff3e357a.css?body=1" for ::1 at 2015-03-09 14:19:04 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:19:04 -0400
+
+
+Started GET "/assets/application-d73acf2d9da3e4a96844022ca4d89b81.css?body=1" for ::1 at 2015-03-09 14:19:04 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:19:04 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:19:04 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:20:19 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-0ff24ec5d8fe7d2699528bbfff3e357a.css?body=1" for ::1 at 2015-03-09 14:20:20 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:20:20 -0400
+
+
+Started GET "/assets/application-d73acf2d9da3e4a96844022ca4d89b81.css?body=1" for ::1 at 2015-03-09 14:20:20 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:20:20 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:20:20 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:21:37 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-263448252c8f4bb69937ffcb13cedc3e.css?body=1" for ::1 at 2015-03-09 14:21:37 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:21:37 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:21:37 -0400
+
+
+Started GET "/assets/style-37669c4624069acfa0f24dd265421942.css?body=1" for ::1 at 2015-03-09 14:21:37 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:21:37 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:21:50 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:21:50 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:21:50 -0400
+
+
+Started GET "/assets/application-aa82719c992b4d60f9daf0103d7d51a6.css?body=1" for ::1 at 2015-03-09 14:21:50 -0400
+
+
+Started GET "/assets/style-c3480eccfc00ecfacfb60c46d420afb9.css?body=1" for ::1 at 2015-03-09 14:21:50 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:21:50 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:22:30 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 69ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-7c0aa1e0b65e7e034eb0dcd9e3ce4f10.css?body=1" for ::1 at 2015-03-09 14:22:30 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:22:30 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:22:30 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:22:30 -0400
+
+
+Started GET "/assets/application-034d688b1e58a650e3d39f6cd1ed6186.css?body=1" for ::1 at 2015-03-09 14:22:30 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:22:39 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-4988fcb9a83fd543f2684783e13a265e.css?body=1" for ::1 at 2015-03-09 14:22:39 -0400
+
+
+Started GET "/assets/application-6059b13368bfdef53a777bc399a3720c.css?body=1" for ::1 at 2015-03-09 14:22:39 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:22:39 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:22:39 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:22:39 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:31:59 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:32:00 -0400
+
+
+Started GET "/assets/style-4e8ea087ccd323c4a0cc6a697c09bbdd.css?body=1" for ::1 at 2015-03-09 14:32:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:32:00 -0400
+
+
+Started GET "/assets/application-08103ae465c6334b9dff0f8ec28b1447.css?body=1" for ::1 at 2015-03-09 14:32:00 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:32:00 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:33:10 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-4e8ea087ccd323c4a0cc6a697c09bbdd.css?body=1" for ::1 at 2015-03-09 14:33:10 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:33:10 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:33:10 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:33:10 -0400
+
+
+Started GET "/assets/application-08103ae465c6334b9dff0f8ec28b1447.css?body=1" for ::1 at 2015-03-09 14:33:10 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:33:59 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-4804b27731a6c095ac576392ffeb0147.css?body=1" for ::1 at 2015-03-09 14:34:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:34:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:34:00 -0400
+
+
+Started GET "/assets/application-42925be290db0aaf67c8e40df8c90703.css?body=1" for ::1 at 2015-03-09 14:34:00 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:34:00 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:34:19 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-2ad8829ab52d8de05fe6159e88519d3d.css?body=1" for ::1 at 2015-03-09 14:34:19 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:34:19 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:34:19 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:34:19 -0400
+
+
+Started GET "/assets/style-ad1f7151b349a4de98cc728bceba3c4e.css?body=1" for ::1 at 2015-03-09 14:34:19 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:36:22 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-67b30be34781be894876d8e421a110ab.css?body=1" for ::1 at 2015-03-09 14:36:22 -0400
+
+
+Started GET "/assets/application-f9450f5daefe203313bee397d5e22ec1.css?body=1" for ::1 at 2015-03-09 14:36:22 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:36:22 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:36:22 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:36:22 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:36:46 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-1d5decea4cc38490bc877214526e8875.css?body=1" for ::1 at 2015-03-09 14:36:46 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:36:46 -0400
+
+
+Started GET "/assets/application-43baf865c5e113fa6f1eab2cbb6986a9.css?body=1" for ::1 at 2015-03-09 14:36:46 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:36:46 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:36:46 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:37:16 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-beefb208d4da6bd5e117931583efec03.css?body=1" for ::1 at 2015-03-09 14:37:16 -0400
+
+
+Started GET "/assets/application-7eb0bb79c7ee31f2d09fb32b5fe50492.css?body=1" for ::1 at 2015-03-09 14:37:16 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:37:16 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:37:16 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:37:16 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:37:42 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 95ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-e4f5eab83a9a9ae452931e69e578f33c.css?body=1" for ::1 at 2015-03-09 14:37:42 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:37:42 -0400
+
+
+Started GET "/assets/application-0776664610ed5be7c2799bfdaff48f0f.css?body=1" for ::1 at 2015-03-09 14:37:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:37:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:37:42 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:43:26 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-5028aed9a581401dfbf89f05dab7a5aa.css?body=1" for ::1 at 2015-03-09 14:43:26 -0400
+
+
+Started GET "/assets/application-2523a7862a6088d0a4634734ed82aeb1.css?body=1" for ::1 at 2015-03-09 14:43:26 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:43:26 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:43:26 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:43:26 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:43:57 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-a95589bdcf63ac0feeb02d125cdc0dd0.css?body=1" for ::1 at 2015-03-09 14:43:57 -0400
+
+
+Started GET "/assets/application-512b5eefec1e947ad22a9341585a9533.css?body=1" for ::1 at 2015-03-09 14:43:57 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:43:57 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:43:57 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:43:57 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:47:37 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-ac14dd532e82b423867848de4bbfbb84.css?body=1" for ::1 at 2015-03-09 14:47:37 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:47:37 -0400
+
+
+Started GET "/assets/application-62cac15b10cbd7f6fa369fa688a8f55b.css?body=1" for ::1 at 2015-03-09 14:47:37 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:47:37 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:47:37 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:47:47 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-ac14dd532e82b423867848de4bbfbb84.css?body=1" for ::1 at 2015-03-09 14:47:47 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:47:47 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:47:47 -0400
+
+
+Started GET "/assets/application-62cac15b10cbd7f6fa369fa688a8f55b.css?body=1" for ::1 at 2015-03-09 14:47:47 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:47:47 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:47:55 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-4ce8eb61f3c57858f500e2c894efa13a.css?body=1" for ::1 at 2015-03-09 14:47:55 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:47:55 -0400
+
+
+Started GET "/assets/application-0d842a9ff00cd42a1695c95208b67a8f.css?body=1" for ::1 at 2015-03-09 14:47:55 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:47:55 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:47:55 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:49:35 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:49:35 -0400
+
+
+Started GET "/assets/style-021f8e79c11c3060120bda5094bcf143.css?body=1" for ::1 at 2015-03-09 14:49:35 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:49:35 -0400
+
+
+Started GET "/assets/application-eb594dee1782dbe8022ef7d211412a6b.css?body=1" for ::1 at 2015-03-09 14:49:35 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:49:35 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:50:34 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-282bb704836081bcc36e8d86b6f813d5.css?body=1" for ::1 at 2015-03-09 14:50:34 -0400
+
+
+Started GET "/assets/application-6f58cdf21496deebfa5b510b5de99d92.css?body=1" for ::1 at 2015-03-09 14:50:34 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:50:34 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:50:34 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:50:34 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:51:00 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-e1c93cbe8d26419ba24d28c272343f15.css?body=1" for ::1 at 2015-03-09 14:51:00 -0400
+
+
+Started GET "/assets/style-9b4102d4e9b21fca50b017e0af5965cf.css?body=1" for ::1 at 2015-03-09 14:51:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:51:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:51:00 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:51:00 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 14:51:44 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-cabf6aaf62aea9bba6bad3b3cbba5d0b.css?body=1" for ::1 at 2015-03-09 14:51:44 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:51:44 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:51:44 -0400
+
+
+Started GET "/assets/application-2e43d4ba569b0a2422cc097b8b1c3036.css?body=1" for ::1 at 2015-03-09 14:51:44 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:51:44 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 14:52:27 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-38620646fc66b66d0d8b709b31836fe9.css?body=1" for ::1 at 2015-03-09 14:52:28 -0400
+
+
+Started GET "/assets/application-91b17054feb9bbc0f2b0752d9d0d88a9.css?body=1" for ::1 at 2015-03-09 14:52:28 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:52:28 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:52:28 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:52:28 -0400
+
+
+Started GET "/home" for ::1 at 2015-03-09 14:52:37 -0400
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/stations" for ::1 at 2015-03-09 14:52:41 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stations"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 14:56:06 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 14:56:06 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:56:06 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 14:56:06 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:56:06 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:56:07 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 14:58:10 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 69ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 14:58:10 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:58:10 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:58:10 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:58:10 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 14:58:10 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 14:58:34 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:58:34 -0400
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 14:58:34 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:58:34 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 14:58:34 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:58:34 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 14:58:47 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 14:58:47 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 14:58:47 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 14:58:47 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 14:58:47 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 14:58:47 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:00:45 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 15:00:45 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:00:45 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 15:00:45 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:00:45 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:00:45 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:03:28 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 15:03:28 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:03:28 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 15:03:28 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:03:28 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:03:28 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:04:19 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-2dc5141087af184a5c80716db61bdbcd.css?body=1" for ::1 at 2015-03-09 15:04:19 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:04:19 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:04:19 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:04:19 -0400
+
+
+Started GET "/assets/application-0bf823e112bd1c9ae59902c8bdb27db1.css?body=1" for ::1 at 2015-03-09 15:04:19 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:05:32 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-53710ed4c4c265459264d14722775a94.css?body=1" for ::1 at 2015-03-09 15:05:32 -0400
+
+
+Started GET "/assets/application-6a2a077722a0ac994a9443e3b1f48304.css?body=1" for ::1 at 2015-03-09 15:05:33 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:05:33 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:05:33 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:05:33 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:12:26 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-53710ed4c4c265459264d14722775a94.css?body=1" for ::1 at 2015-03-09 15:12:26 -0400
+
+
+Started GET "/assets/application-6a2a077722a0ac994a9443e3b1f48304.css?body=1" for ::1 at 2015-03-09 15:12:26 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:12:26 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:12:26 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:12:26 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:12:43 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-53710ed4c4c265459264d14722775a94.css?body=1" for ::1 at 2015-03-09 15:12:43 -0400
+
+
+Started GET "/assets/application-6a2a077722a0ac994a9443e3b1f48304.css?body=1" for ::1 at 2015-03-09 15:12:43 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:12:43 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:12:43 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:12:43 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:16:22 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:16:22 -0400
+
+
+Started GET "/assets/style-dd9edf9f343959266ae17c9ce8aecbd3.css?body=1" for ::1 at 2015-03-09 15:16:22 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:16:22 -0400
+
+
+Started GET "/assets/application-7471c452689ec754f9b47116a95e03dd.css?body=1" for ::1 at 2015-03-09 15:16:22 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:16:22 -0400
+
+
+Started GET "/home" for ::1 at 2015-03-09 15:17:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-09 15:17:10 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:17:10 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:17:10 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:17:10 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:24:56 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:24:56 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:24:56 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:24:56 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:31:32 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 102ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:31:32 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:31:32 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:31:32 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:31:32 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:31:32 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:33:53 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:33:54 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:33:54 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:33:54 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:33:54 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:33:54 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:35:05 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:35:05 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:35:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:35:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:35:05 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:35:05 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:37:29 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:37:29 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:37:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:37:29 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:37:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:37:29 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:38:07 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:38:07 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:38:07 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:38:07 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:38:07 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:38:07 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:38:33 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-94ed27408616d4509081322e83c7ab57.css?body=1" for ::1 at 2015-03-09 15:38:33 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:38:33 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:38:33 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:38:33 -0400
+
+
+Started GET "/assets/application-ccc923fb52b489c0a3717faf7e6adaee.css?body=1" for ::1 at 2015-03-09 15:38:33 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:39:42 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:39:42 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:39:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:39:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:39:42 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:39:42 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:41:45 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:41:45 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:41:45 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:41:45 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:41:45 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:41:45 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:42:47 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:42:47 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:42:47 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:42:47 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:42:47 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:42:47 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:43:11 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:43:11 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:43:11 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:43:11 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:43:11 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:43:11 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:44:06 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:44:06 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:44:06 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:44:06 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:44:06 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:44:06 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:44:25 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:44:25 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:44:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:44:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:44:25 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:44:25 -0400
+
+
+Started GET "/" for ::1 at 2015-03-09 15:51:45 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:51:45 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:51:45 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:51:45 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:51:45 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:51:45 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:51:47 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:51:47 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:51:47 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:51:47 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:51:47 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:51:47 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:52:30 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:52:30 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:52:30 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:52:30 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:52:30 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:52:30 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:53:43 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:53:43 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:53:43 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:53:43 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:53:43 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:53:43 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:54:48 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:54:48 -0400
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:54:48 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:54:48 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:54:48 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:54:48 -0400
+
+
+Started GET "/dashboard" for ::1 at 2015-03-09 15:55:17 -0400
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style-3efd8b83a47a43b690dbe7709a4c61c1.css?body=1" for ::1 at 2015-03-09 15:55:17 -0400
+
+
+Started GET "/assets/application-af2c33a6d2e180b7b73693945520167f.css?body=1" for ::1 at 2015-03-09 15:55:17 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-09 15:55:17 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-09 15:55:17 -0400
+
+
+Started GET "/assets/application-8a8272801b4011d3213ccdba25299149.js?body=1" for ::1 at 2015-03-09 15:55:17 -0400
