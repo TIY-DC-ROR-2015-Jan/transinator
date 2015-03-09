@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users 
- root to: "home#index"
+ root to: "home#home"
 
  scope '/dashboard' do
   get "/" => 'dashboard#show', as: 'dashboard'
