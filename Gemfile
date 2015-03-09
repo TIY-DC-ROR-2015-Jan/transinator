@@ -32,6 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
 
+gem "httparty"
+
 group :development, :test do
   gem "pry-rails"
 

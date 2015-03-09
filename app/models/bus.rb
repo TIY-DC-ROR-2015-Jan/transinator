@@ -1,0 +1,5 @@
+class Bus < Station
+
+
+
+end
