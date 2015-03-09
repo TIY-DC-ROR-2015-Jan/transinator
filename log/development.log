@@ -23128,3 +23128,59 @@ NoMethodError (undefined method `check_distance' for #<Hash:0x007fa201af8408>):
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mBike Load (1.7ms)[0m  SELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:48:15 -0400
+Processing by BikesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBike Load (2.1ms)[0m  [1mSELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')[0m
+  Rendered bikes/index.json.jbuilder (21.7ms)
+Completed 200 OK in 10996ms (Views: 36.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:49:34 -0400
+Processing by BikesController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBike Load (1.4ms)[0m  [1mSELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')[0m
+  Rendered bikes/index.json.jbuilder (0.8ms)
+Completed 200 OK in 49ms (Views: 11.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:51:05 -0400
+Processing by BikesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBike Load (2.4ms)[0m  [1mSELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')[0m
+  Rendered bikes/index.json.jbuilder (0.7ms)
+Completed 200 OK in 28ms (Views: 14.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:51:16 -0400
+Processing by BikesController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBike Load (1.7ms)[0m  [1mSELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')[0m
+  Rendered bikes/index.json.jbuilder (1.1ms)
+Completed 200 OK in 48ms (Views: 12.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:51:45 -0400
+Processing by BikesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 19ms
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/models/user.rb:10:in `get_close_bikes'
+  app/controllers/bikes_controller.rb:4:in `index'
+
+
+  Rendered /Users/ablythe/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/ablythe/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/ablythe/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ablythe/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.3ms)
+
+
+Started GET "/dashboard/bikes.json" for ::1 at 2015-03-09 16:52:02 -0400
+Processing by BikesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBike Load (1.4ms)[0m  SELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')
+  Rendered bikes/index.json.jbuilder (1.5ms)
+Completed 200 OK in 68ms (Views: 24.1ms | ActiveRecord: 2.7ms)
