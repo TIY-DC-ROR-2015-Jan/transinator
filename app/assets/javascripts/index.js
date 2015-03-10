@@ -290,7 +290,7 @@ $(document).ready(function(){
 
 	getTemplates();
 
-	$("#dash").click(function(){
+	$("#refresh").click(function(){
 		getBikeResults(displayBikeDashResults);
 	});
 
