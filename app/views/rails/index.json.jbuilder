@@ -1,5 +1,5 @@
 
-if @rail_favorites["statusCode"] != "404"
+if @rail_favorites["statusCode"] != 404
   get_trains = @rail_favorites["Trains"]
   @by_station = get_trains.group_by { |t| t["LocationName"]}
 

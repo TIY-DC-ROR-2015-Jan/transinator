@@ -23,6 +23,9 @@ var getTemplates = function(){
   var busString = $("#bus-template").text()
   templates.busInfo = Handlebars.compile(busString);
 
+  var busDashString = $("#dash-bus-template").text()
+  templates.busDashInfo = Handlebars.compile(busDashString);
+
   var bikeString = $("#bike-template").text()
   templates.bikeInfo = Handlebars.compile(bikeString);
 
@@ -112,7 +115,21 @@ var MetroDashView = Backbone.View.extend({
 
 var BusView = Backbone.View.extend({
 
-  events: { "click #busFavorite": "markAsFavorite"},
+  tagName: "option",
+
+  initialize: function(model) {
+  	this.model = model;
+    this.render();
+  },
+
+  render: function() {
+    this.$el.html(templates.busInfo(this.model.viewDetails()));
+    //this.$el.attr("value", this.model.get('id')); //id
+  },
+
+});
+
+var BusDashView = Backbone.View.extend({
 
   tagName: "div",
 
@@ -122,12 +139,7 @@ var BusView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(templates.busInfo(this.model.viewDetails()));
-  },
-
-  markAsFavorite: function() {
-  	console.log(this.model.get('name') + " was clicked");
-  	var busFavoriteID = this.model.get('name') //id
+    this.$el.html(templates.busDashInfo(this.model.viewDetails()));
   }
 
 });
@@ -177,6 +189,7 @@ var getRailResults = function(callback) {
 var displayRailDashResults = function(data) {
 
 	railsViews = [];
+	railsFavs = [];
 
 	_.each(data.nearby_predictions, function(element){
 		element = new MetroStation({
@@ -184,12 +197,24 @@ var displayRailDashResults = function(data) {
 			railArrivalArray: element.rail_arrivals,
 		});
 		railsViews.push(new MetroDashView(element));
-		console.log(railsViews[0]);
 	});
 
     _.each(railsViews, function(element, index){
     $("#rails").append(railsViews[index].el);
     });
+
+
+    /*_.each(data.nearby_predictions, function(element){
+		element = new MetroStation({
+			name: element.station_name,
+			railArrivalArray: element.rail_arrivals,
+		});
+		railsFavs.push(new MetroDashView(element));
+	});
+
+    _.each(railsFavs, function(element, index){
+    $("#favoriteRailsDash").append(railsFavs[index].el);
+    });*/
 }
 
 var displayRailResults = function(data) {
@@ -221,6 +246,48 @@ var getBusResults = function(callback) {
     })
 }
 
+var displayBusDashResults = function(data) {
+
+	busViews = [];
+	busFavs = [];
+
+	_.each(data.nearby_arrivals, function(element, index){
+
+		if (element.stop_name && element.predictions.length > 0) {
+		element = new BusStop({
+			name: element.stop_name,
+			directionText: element.predictions[0].direction_text,	
+			minutes: element.predictions[0].minutes,
+			routeID: element.predictions[0].route_id
+		});
+
+		busViews.push(new BusDashView(element));
+		}
+	});
+
+    _.each(busViews, function(element, index){
+    $("#bus").append(busViews[index].el);
+    });
+
+    /*_.each(data.nearby_arrivals, function(element, index){
+
+		if (element.stop_name && element.predictions.length > 0) {
+		element = new BusStop({
+			name: element.stop_name,
+			directionText: element.predictions[0].direction_text,	
+			minutes: element.predictions[0].minutes,
+			routeID: element.predictions[0].route_id
+		});
+
+		busFavs.push(new BusDashView(element));
+		}
+	});
+
+    _.each(busFavs, function(element, index){
+    $("#favoriteBus").append(busFavs[index].el);
+    });*/
+}
+
 var displayBusResults = function(data) {
 
 	_.each(data.nearby_arrivals, function(element, index){
@@ -247,7 +314,7 @@ var getBikeResults = function(callback) {
       url: "/dashboard/bikes/close.json",
       method: "GET",
       success: function(data) {
-      	console.log(data);
+      	//console.log(data);
         callback(data);
       }
     })
@@ -255,7 +322,7 @@ var getBikeResults = function(callback) {
 
 var displayBikeResults = function(data) {
 
-	_.each(data, function(element){
+	_.each(data.nearby, function(element){
 		element = new BikeStation({
 			name: element.name,
 			bikes: element.bikes,
@@ -273,8 +340,9 @@ var displayBikeResults = function(data) {
 var displayBikeDashResults = function(data) {
 
 	bikeViews = [];
+	bikeFavs = [];
 
-	_.each(data, function(element){
+	_.each(data.nearby, function(element){
 		element = new BikeStation({
 			name: element.name,
 			bikes: element.bikes,
@@ -287,44 +355,63 @@ var displayBikeDashResults = function(data) {
     _.each(bikeViews, function(element, index){
     $("#bikeDash").append(bikeViews[index].el);
     });
+
+    _.each(data.favorite, function(element){
+		element = new BikeStation({
+			name: element.name,
+			bikes: element.bikes,
+			empty: element.empty,
+			id: element.id
+		});
+		bikeFavs.push(new BikeDashView(element));
+	});
+
+    _.each(bikeFavs, function(element, index){
+    $("#favoriteBikeDash").append(bikeFavs[index].el);
+    });
 }
 
 var sendFavoriteBike = function(selectedBikeStation) {
-	var urlString = "/dashboard/station/" + selectedBikeStation;
+
+	var id = selectedBikeStation;
 
 	$.ajax({
-      url: urlString,
+      url: "/dashboard/station",
       method: "POST",
-      data: selectedBikeStation,
+      data: {id: id},
       success: function(data) {
-      	//console.log(data);
+      	alert("added bike station to favorites");
       }
     })
-}/*
+}
 
 var sendFavoriteRail = function(selectedRailStation) {
+
+	var id = selectedRailStation;
+
 	$.ajax({
-      url: favorite rail,
-      method: "GET",
-      data: selectedRailStation,
+      url: "/dashboard/station",
+      method: "POST",
+      data: {id: id},
       success: function(data) {
-      	console.log(data);
-        callback(data);
+      	alert("added metro station to favorites");
       }
     })
 }
 
-var sendFavoriteBike = function(selectedBikeStation) {
+var sendFavoriteBus = function(selectedBusStation) {
+
+	var id = selectedBusStation;
+
 	$.ajax({
-      url: favorite bike,
-      method: "GET",
-      data: selectedBikeStation,
+      url: "/dashboard/station",
+      method: "POST",
+      data: {id: id},
       success: function(data) {
-      	console.log(data);
-        callback(data);
+      	alert("added bus station to favorites");
       }
     })
-}*/
+}
 
 
 $(document).ready(function(){
@@ -333,7 +420,7 @@ $(document).ready(function(){
 
 	$("#refresh").click(function(){
 		getBikeResults(displayBikeDashResults);
-		getBusResults(displayBusResults);
+		getBusResults(displayBusDashResults);
 		getRailResults(displayRailDashResults);
 	});
 
@@ -353,7 +440,13 @@ $(document).ready(function(){
  	$("#railsFavorite").click(function() {
   		var selectedRailStation = $("#rails").val();
   		console.log(selectedRailStation);
-  		//sendFavoriteRail(selectedRailStation);
+  		sendFavoriteRail(selectedRailStation);
+ 	});
+
+ 	$("#busFavorite").click(function() {
+  		var selectedBusStation = $("#bus").val();
+  		console.log(selectedBusStation);
+  		sendFavoriteBus(selectedBusStation);
  	});
 
 });
