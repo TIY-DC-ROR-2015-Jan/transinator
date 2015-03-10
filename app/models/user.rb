@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def add_favorite_bus_stop
-    fail
+    
   end
 
   def store_location lat, long

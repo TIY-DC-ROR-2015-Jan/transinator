@@ -6,12 +6,14 @@ class BusesController < ApplicationController
 
     buses_near_user = Bus.get_nearby_bus_stops(current_user)
     stops = buses_near_user["Stops"]
+#Make has for name, stop ID pairs
+    @bus_hash = Bus.make_lookup_hash(stops)
     stop_ids = Bus.find_nearby_bus_stop_ids(stops)
     @near_bus_predictions = Bus.nearby_bus_predictions(stop_ids)
     @near_bus_predictions
 
 
-    return @favorite_stop_info, @near_bus_predictions
+    return @favorite_stop_info, @near_bus_predictions, @bus_hash
   end
 
 end

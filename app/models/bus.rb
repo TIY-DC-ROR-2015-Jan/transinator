@@ -32,5 +32,16 @@ class Bus < Station
     bus_stop_info
   end
 
+  def self.make_lookup_hash(buses)
+    stop_lookup_hash = {}
+    buses.each do |stop|
+      name = stop["Name"]  
+      id = stop["StopID"]
+      stop_lookup_hash.store(name, id)  
+    end
+    stop_lookup_hash
+  end
+
+
 
 end
