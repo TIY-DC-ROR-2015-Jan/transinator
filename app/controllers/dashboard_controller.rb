@@ -5,4 +5,10 @@ def show
   
 end
 
+
+def new
+  @user = current_user.id
+end
+
+
 end

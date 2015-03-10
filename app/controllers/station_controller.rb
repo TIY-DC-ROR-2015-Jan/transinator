@@ -9,5 +9,4 @@ end
 
 def destroy
   current_user.delete_favorite_station params[:id]
-
 end
