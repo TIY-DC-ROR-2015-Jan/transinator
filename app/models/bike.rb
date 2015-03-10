@@ -2,7 +2,7 @@ class Bike < Station
   include HTTParty
   base_uri 'http://www.capitalbikeshare.com'
   
-  def self.get_bike_stations
+  def self.load_bike_stations
     data = get('/data/stations/bikeStations.xml')
 
     data["stations"]["station"].each do |station|
