@@ -44,23 +44,28 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="bus">
+			<div class="cell" id="bus">
 				<script type="x-handlebars-template" id="bus-template">
 					<div class="infoWrap">
-					<div class="row">
-						<div class="cell">
-							Station:{{name}}
-						</div> 	
-					</div>
-
-					<div class="row">
-						<div class="cell columns2">
-							Bikes:{{bikes}} 
-						</div> 
-						<div class="cell columns2">
-							Empty:{{empty}} 
+						<div class="row">
+							<div class="cell">
+								Stop: {{name}}
+							</div> 	
 						</div>
-					</div> 
+
+						<div class="row">
+							<div class="cell">
+								Direction: {{directionText}} 
+							</div> 
+						</div> 
+						<div class="row">
+							<div class="cell columns2">
+								Minutes: {{minutes}} 
+							</div>
+							<div class="cell columns2">
+								Route: {{routeID}} 
+							</div>
+						</div>
 					</div>
 				</script>	
 			</div>
@@ -75,16 +80,16 @@
 					<div class="infoWrap">
 					<div class="row">
 						<div class="cell">
-							Station:{{name}}
+							Station: {{name}}
 						</div> 	
 					</div>
 
 					<div class="row">
 						<div class="cell columns2">
-							Bikes:{{bikes}} 
+							Bikes: {{bikes}} 
 						</div> 
 						<div class="cell columns2">
-							Empty:{{empty}} 
+							Empty: {{empty}} 
 						</div>
 					</div> 
 					</div>

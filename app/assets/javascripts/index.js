@@ -47,10 +47,10 @@ var MetroStation = Backbone.Model.extend({
 var BusStop = Backbone.Model.extend({
 
     defaults: {
-    name: "",
-    bikes: 0,
-    empty: 0,
-    //id: 0
+   		name: "",
+		directionText: "",
+		minutes: 0,
+		routeID: ""
   	},
 
   viewDetails: function() {
@@ -144,7 +144,7 @@ var BikeDashView = Backbone.View.extend({
   },
 
 });
-
+/*
 var getRailResults = function(callback) {
     $.ajax({
       url: "/dashboard/rails.json",
@@ -171,29 +171,33 @@ var displayRailResults = function(data) {
     _.each(railsViews, function(element, index){
     $("#rails").append(railsViews[index].el);
     });
-}
+}*/
 
 var getBusResults = function(callback) {
     $.ajax({
-      url: "/dashboard/bikes.json",
+      url: "/dashboard/buses.json",
       method: "GET",
       success: function(data) {
+      	console.log(data);
         callback(data);
-        //console.log(data);
-      }
+      },
     })
 }
 
 var displayBusResults = function(data) {
 
-	_.each(data, function(element){
+	_.each(data.nearby_arrivals, function(element, index){
+
+		if (element.stop_name && element.predictions.length > 0) {
 		element = new BusStop({
-			name: element.name,
-			bikes: element.bikes,
-			empty: element.empty
-			//id: element.id
+			name: element.stop_name,
+			directionText: element.predictions[0].direction_text,	
+			minutes: element.predictions[0].minutes,
+			routeID: element.predictions[0].route_id
 		});
+
 		busViews.push(new BusView(element));
+		}
 	});
 
     _.each(busViews, function(element, index){
@@ -292,11 +296,11 @@ $(document).ready(function(){
 
 	$("#refresh").click(function(){
 		getBikeResults(displayBikeDashResults);
+		getBusResults(displayBusResults);
 	});
 
 
 	$("#search").click(function(){
-	//$("#resultsWrap").show();
 	getRailResults(displayRailResults);
 	getBusResults(displayBusResults);
 	getBikeResults(displayBikeResults);
