@@ -4,9 +4,11 @@ class Rail < Station
   def self.get_user_rail_predictions(user)
     station_ids = []
     stations = user.stations.where(type: "Rail")
-    stations.each { |s| station_ids << s.api_id }
-    station_ids = station_ids.join
+    stations.each { |s| station_ids.push(s.api_id.to_s) }
+    station_ids = station_ids * ","
     rail_info = HTTParty.get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/#{station_ids}?api_key=#{ENV["WMATA_APIKEY"]}")
+    binding.pry
+    return rail_info
   end
 
   #def get_user_rail_ids?
