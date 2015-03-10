@@ -18,10 +18,18 @@ class User < ActiveRecord::Base
     close_bikes
   end
 
-  def get_close_rails
+  def get_close_rails trains
+    close_rail = []
+    trains.each do |train|
+      if train.check_distance(self) < DISTANCE
+        close_rail.push train
+      end
+    end
+    close_rail
   end
 
   def get_close_buses
+
   end
 
 
