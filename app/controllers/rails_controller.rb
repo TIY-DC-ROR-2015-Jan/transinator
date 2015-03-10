@@ -14,7 +14,7 @@ class RailsController < ApplicationController
     #   @rail_favorites["Trains"].each { |e| @rail_nearby << rail if e["LocationCode"] != rail.api_id }
     # end
   
-    return @all_rail_nearby, @rail_favorites
+    return @near_rail_info, @rail_favorites
   end
 
 end
