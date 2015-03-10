@@ -23184,3 +23184,4 @@ Processing by BikesController#index as JSON
   [1m[35mBike Load (1.4ms)[0m  SELECT "stations".* FROM "stations" WHERE "stations"."type" IN ('Bike')
   Rendered bikes/index.json.jbuilder (1.5ms)
 Completed 200 OK in 68ms (Views: 24.1ms | ActiveRecord: 2.7ms)
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
