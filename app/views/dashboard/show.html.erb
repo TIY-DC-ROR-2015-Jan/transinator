@@ -1,11 +1,14 @@
 
-
 <div class="row center">
 		<h1>Dashboard</h1>
 		<a href="#"><button id="refresh">Refresh</button></a>
 </div>
 
-<div id="resultsWrap" class="resultsWrap">
+<div class="row center">
+		<h1>Favorites</h1>
+</div>
+
+<div id="favoritesWrap" class="resultsWrap">
 
 	<div class="row center">
 
@@ -19,7 +22,7 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell" id="rails">
+			<div class="cell" id="favoriteRailsDash">
 				<script type="x-handlebars-template" id="dash-rails-template">
 					<div class="infoWrap">
 					<div class="row">
@@ -53,7 +56,7 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell" id="bus">
+			<div class="cell" id="favoriteBus">
 				<script type="x-handlebars-template" id="bus-template">
 					<div class="infoWrap">
 						<div class="row">
@@ -83,7 +86,7 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell" id="bikeDash">
+			<div class="cell" id="favoriteBikeDash">
 				<script type="x-handlebars-template" id="dash-bike-template">
 					
 					<div class="infoWrap">
@@ -109,3 +112,43 @@
 	</div>
 
 </div>
+
+<div class="row center">
+		<h1>Nearby</h1>
+</div>
+
+<div id="resultsWrap" class="resultsWrap">
+
+	<div class="row center">
+
+		<div class="cell columns3">Metro Stations</div>
+
+		<div class="cell columns3">Bus Stations</div>
+
+		<div class="cell columns3">Bike Stations</div>
+
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="rails">
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="bus">
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="bikeDash">
+			</div>
+		</div>
+	</div>
+
+</div>
+

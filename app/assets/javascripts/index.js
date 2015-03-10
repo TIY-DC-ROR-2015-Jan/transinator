@@ -68,7 +68,7 @@ var BikeStation = Backbone.Model.extend({
     name: "",
     bikes: 0,
     empty: 0,
-    //id: 0
+    id: 0
   	},
 
   viewDetails: function() {
@@ -143,7 +143,7 @@ var BikeView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(templates.bikeInfo(this.model.viewDetails()));
-    this.$el.attr("value", this.model.get('name')); //id
+    this.$el.attr("value", this.model.get('id')); //id
   },
 
 });
@@ -259,8 +259,8 @@ var displayBikeResults = function(data) {
 		element = new BikeStation({
 			name: element.name,
 			bikes: element.bikes,
-			empty: element.empty
-			//id: element.id
+			empty: element.empty,
+			id: element.id
 		});
 		bikeViews.push(new BikeView(element));
 	});
@@ -278,8 +278,8 @@ var displayBikeDashResults = function(data) {
 		element = new BikeStation({
 			name: element.name,
 			bikes: element.bikes,
-			empty: element.empty
-			//id: element.id
+			empty: element.empty,
+			id: element.id
 		});
 		bikeViews.push(new BikeDashView(element));
 	});
@@ -289,7 +289,7 @@ var displayBikeDashResults = function(data) {
     });
 }
 
-/*var sendFavoriteBike = function(selectedBikeStation) {
+var sendFavoriteBike = function(selectedBikeStation) {
 	var urlString = "/dashboard/station/" + selectedBikeStation;
 
 	$.ajax({
@@ -297,10 +297,10 @@ var displayBikeDashResults = function(data) {
       method: "POST",
       data: selectedBikeStation,
       success: function(data) {
-      	console.log(data);
+      	//console.log(data);
       }
     })
-}
+}/*
 
 var sendFavoriteRail = function(selectedRailStation) {
 	$.ajax({
@@ -347,7 +347,7 @@ $(document).ready(function(){
  	$("#bikeFavorite").click(function() {
   		var selectedBikeStation = $("#bike").val();
   		console.log(selectedBikeStation);
-  		//sendFavoriteBike(selectedBikeStation);
+  		sendFavoriteBike(selectedBikeStation);
  	});
 
  	$("#railsFavorite").click(function() {
