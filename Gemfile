@@ -38,8 +38,12 @@ gem "haversine_distance"
 group :development, :test do
   gem "pry-rails"
   gem 'dotenv-rails'
-  gme 'rpsec-rails'
+  gem 'rspec-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+end
