@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   DISTANCE = 2
   def get_close_bikes
     close_bikes =[]
-    Bikes.all.each do |bike|
+    Bike.all.each do |bike|
       if bike.check_distance(self) < DISTANCE
         close_bikes.push bike
       end
@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
 
-<<<<<<< HEAD
+
   def store_location lat, long
     update! lat: lat, long: long
   end
@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
     user_stations.find_or_create_by(station_id: station_id)
   end
 
-=======
->>>>>>> master
+  def delete_favorite_station station_id
+    user_stations.find_by(station_id: station_id).delete
+  end
 end
