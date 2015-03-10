@@ -7,14 +7,23 @@ class User < ActiveRecord::Base
   has_many :stations, through: :user_stations
 
   DISTANCE = 2
-  def get_close_bikes bikes
+  def get_close_bikes
     close_bikes =[]
-    bikes.each do |bike|
+    Bikes.all.each do |bike|
       if bike.check_distance(self) < DISTANCE
         close_bikes.push bike
       end
     end
     close_bikes
+  end
+
+
+  def store_location lat, long
+    update! lat: lat, long: long
+  end
+
+  def add_favorite_station station_id
+    user_stations.find_or_create_by(station_id: station_id)
   end
 
 end
