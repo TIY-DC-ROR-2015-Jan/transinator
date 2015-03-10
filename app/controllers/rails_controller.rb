@@ -4,6 +4,7 @@ class RailsController < ApplicationController
     all_rail_db = Station.get_all_rail_db
     @rail_favorites = Rail.get_favorite_rail_predictions(current_user)
     @rail_favorites
+    binding.pry
     @all_rail_nearby = current_user.get_close_rails(all_rail_db)
     @near_rail_info = Rail.get_nearby_rail_predictions(@all_rail_nearby)
     
