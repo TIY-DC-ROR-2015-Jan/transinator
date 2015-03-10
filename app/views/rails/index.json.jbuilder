@@ -1,4 +1,5 @@
-unless @rail_favorites["statusCode"] = "404"
+
+if @rail_favorites["statusCode"] != "404"
   get_trains = @rail_favorites["Trains"]
   @by_station = get_trains.group_by { |t| t["LocationName"]}
 
@@ -19,7 +20,6 @@ get_trains = @near_rail_info["Trains"]
 @close_by_station = get_trains.group_by { |t| t["LocationName"]}
 
 json.nearby_predictions @close_by_station do |rail|
-binding.pry
   json.station_name rail[0]
   json.api_id rail[1].first["LocationCode"]
   json.station_id Rail.find_by(api_id: rail[1].first["LocationCode"]).id

@@ -39,7 +39,11 @@ class Bus < Station
       id = stop["StopID"]
       stop_lookup_hash.store(name, id)  
     end
-    stop_lookup_hash
+    @stop_lookup_hash
+  end
+
+  def lookup_hash
+    @stop_lookup_hash
   end
 
 

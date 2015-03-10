@@ -4,10 +4,10 @@ def new
 end
 
 def create
-  if params["Bus"]
+  if params[:type] == "bus"
     current_user.add_favorite_bus_stop(params[:api_id])
       if errors.any? == nil || []
-        update_favorite_bus_stop(params[:api_id] params[:stop_name])
+        current_user.update_favorite_bus_stop(params[:api_id])
       end
   else
     current_user.add_favorite_station params[:id]

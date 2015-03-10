@@ -33,8 +33,9 @@ class User < ActiveRecord::Base
     user_stations.find_or_create_by(api_id: api_id)
   end
 
-  def update_favorite_bus_stop(api_id, stop_name)
-    user_stations.find_by(api_id: api_id).update(name: stop_name)
+  def update_favorite_bus_stop(api_id)
+    api_lookup_hash = Bus.lookup_hash.invert
+    user_stations.find_by(api_id: api_id).update(name: api_lookup_hash[api_id])
   end
 
   def store_location lat, long
