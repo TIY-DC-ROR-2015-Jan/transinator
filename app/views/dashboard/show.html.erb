@@ -1,12 +1,14 @@
-<div id="dashboardWrap">
+<h1>Dashboard</h1>
+
+<div id="resultsWrap" class="resultsWrap">
 
 	<div class="row center">
 
-		<div class="cell columns3">Metro Information</div>
+		<div class="cell columns3">Metro Stations</div>
 
-		<div class="cell columns3">Bus Information</div>
+		<div class="cell columns3">Bus Stations</div>
 
-		<div class="cell columns3">Bike Information</div>
+		<div class="cell columns3">Bike Stations</div>
 
 	</div>
 
@@ -15,31 +17,22 @@
 		<div class="row">
 			<div class="cell columns3" id="rails">
 				<script type="x-handlebars-template" id="rails-template">
-					{{each}}
+					<div class="infoWrap">
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
+						<div class="cell">
+							Station:{{name}}
+						</div> 	
 					</div>
 
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Bikes:{{bikes}} 
 						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Empty:{{empty}} 
 						</div>
 					</div> 
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
-						</div> 
 					</div>
-					{{/each}}
 				</script>	
 			</div>
 		</div>
@@ -49,31 +42,22 @@
 		<div class="row">
 			<div class="cell columns3" id="bus">
 				<script type="x-handlebars-template" id="bus-template">
-					{{each}}
+					<div class="infoWrap">
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
+						<div class="cell">
+							Station:{{name}}
+						</div> 	
 					</div>
 
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Bikes:{{bikes}} 
 						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Empty:{{empty}} 
 						</div>
 					</div> 
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
-						</div> 
 					</div>
-					{{/each}}
 				</script>	
 			</div>
 		</div>
@@ -81,33 +65,26 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="bike">
+			<div class="cell" id="bike">
 				<script type="x-handlebars-template" id="bike-template">
-					{{each}}
+					
+					<div class="infoWrap">
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
+						<div class="cell">
+							Station:{{name}}
+						</div> 	
 					</div>
 
 					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Bikes:{{bikes}} 
 						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+						<div class="cell columns2">
+							Empty:{{empty}} 
 						</div>
 					</div> 
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
-						</div> 
 					</div>
-					{{/each}}
+					
 				</script>	
 			</div>
 		</div>

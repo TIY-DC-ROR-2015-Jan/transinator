@@ -7,7 +7,9 @@
 		<a href="#"><button id="search">Search</button></a>
 	</div>
 
-	<div id="resultsWrap">
+</div>
+
+	<div id="resultsWrap" class="resultsWrap">
 
 	<div class="row center">
 
@@ -24,31 +26,28 @@
 		<div class="row">
 			<div class="cell columns3" id="rails">
 				<script type="x-handlebars-template" id="rails-template">
-					{{each}}
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+					<div class="infoWrap">
+						<div class="row">
+							<div class="cell">
+								Station:{{name}}
+							</div> 	
 						</div>
-					</div> 
 
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
+						<div class="row">
+							<div class="cell columns2">
+								Bikes:{{bikes}} 
+							</div> 
+							<div class="cell columns2">
+								Empty:{{empty}} 
+							</div>
 						</div> 
+
+						<div class="row">
+							<div class="center">
+								<a href="#"><button id="favorite">Save as favorite</button></a>
+							</div>
+						</div>
 					</div>
-					{{/each}}
 				</script>	
 			</div>
 		</div>
@@ -58,31 +57,28 @@
 		<div class="row">
 			<div class="cell columns3" id="bus">
 				<script type="x-handlebars-template" id="bus-template">
-					{{each}}
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+					<div class="infoWrap">
+						<div class="row">
+							<div class="cell">
+								Station:{{name}}
+							</div> 	
 						</div>
-					</div> 
 
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
+						<div class="row">
+							<div class="cell columns2">
+								Bikes:{{bikes}} 
+							</div> 
+							<div class="cell columns2">
+								Empty:{{empty}} 
+							</div>
 						</div> 
+
+						<div class="row">
+							<div class="center">
+								<a href="#"><button id="favorite">Save as favorite</button></a>
+							</div>
+						</div>
 					</div>
-					{{/each}}
 				</script>	
 			</div>
 		</div>
@@ -90,39 +86,35 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="bike">
+			<div class="cell" id="bike">
 				<script type="x-handlebars-template" id="bike-template">
-					{{each}}
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{name}} informationinformation information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}} information information information
-						</div> 
-					</div>
-
-					<div class="row">
-						<div class="infoWrapn cell  test">
-							{{somedata}} information information information
+					
+					<div class="infoWrap">
+						<div class="row">
+							<div class="cell">
+								Station:{{name}}
+							</div> 	
 						</div>
-					</div> 
 
-					<div class="row">
-						<div class="infoWrap cell  test">
-							{{somedata}}information information information
+						<div class="row">
+							<div class="cell columns2">
+								Bikes:{{bikes}} 
+							</div> 
+							<div class="cell columns2">
+								Empty:{{empty}} 
+							</div>
 						</div> 
+
+						<div class="row">
+							<div class="center">
+								<a href="#"><button id="favorite">Save as favorite</button></a>
+							</div>
+						</div>
 					</div>
-					{{/each}}
+					
 				</script>	
 			</div>
 		</div>
 	</div>
-
-</div>
-
 
 </div>

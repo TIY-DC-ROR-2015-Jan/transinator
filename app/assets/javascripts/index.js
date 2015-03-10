@@ -1,6 +1,15 @@
 var templates = {};
 var views = [];
 
+navigator.geolocation.getCurrentPosition( function(geoposition){
+
+   var latitude = geoposition.coords.latitude;
+   var longitude = geoposition.coords.longitude;
+   $("#longInput").val(longitude);
+   $("#latInput").val(latitude);
+
+});
+
 var getTemplates = function(){
 
   var railsString = $("#rails-template").text()
@@ -48,9 +57,8 @@ var BikeStation = Backbone.Model.extend({
 
     defaults: {
     name: "",
-    location: "",
-    bikes: "",
-    docks: ""
+    bikes: 0,
+    empty: 0,
   	},
 
   viewDetails: function() {
@@ -123,7 +131,7 @@ var BikeView = Backbone.View.extend({
 
 });
 
-var getRailResults = function(callback) {
+/*var getRailResults = function(callback) {
     $.ajax({
       url: metro,
       method: "GET",
@@ -135,7 +143,7 @@ var getRailResults = function(callback) {
 
 var displayRailResults = function(data) {
 
-	._each(data, function(element){
+	_.each(data, function(element){
 		element = new MetroStation;
 		views.push(new MetroView(element));
 	});
@@ -157,7 +165,7 @@ var getBusResults = function(callback) {
 
 var displayBusResults = function(data) {
 
-	._each(data, function(element){
+	_.each(data, function(element){
 		element = new BusStop;
 		views.push(new BusView(element));
 	});
@@ -165,11 +173,11 @@ var displayBusResults = function(data) {
     _.each(views, function(element, index){
     $("#bus").append(views[index].el);
     });
-}
+}*/
 
 var getBikeResults = function(callback) {
     $.ajax({
-      url: bike,
+      url: "/dashboard/bikes.json",
       method: "GET",
       success: function(data) {
         callback(data);
@@ -179,8 +187,12 @@ var getBikeResults = function(callback) {
 
 var displayBikeResults = function(data) {
 
-	._each(data, function(element){
-		element = new BikeStation;
+	_.each(data, function(element){
+		element = new BikeStation({
+			name: element.name,
+			bikes: element.bikes,
+			empty: element.empty
+		});
 		views.push(new BikeView(element));
 	});
 
@@ -196,8 +208,8 @@ $(document).ready(function(){
 
 	$("#search").click(function(){
 	$("#resultsWrap").show();
-	getRailResults(displayRailResults);
-	getBusResults(displayBusResults);
+	//getRailResults(displayRailResults);
+	//getBusResults(displayBusResults);
 	getBikeResults(displayBikeResults);
 	});
 
