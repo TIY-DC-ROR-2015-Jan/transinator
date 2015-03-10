@@ -7,7 +7,6 @@ class Rail < Station
     stations.each { |s| station_ids.push(s.api_id.to_s) }
     station_ids = station_ids * ","
     rail_info = HTTParty.get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/#{station_ids}?api_key=#{ENV["WMATA_APIKEY"]}")
-    binding.pry
     return rail_info
   end
 
