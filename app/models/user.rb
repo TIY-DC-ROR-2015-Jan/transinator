@@ -29,8 +29,12 @@ class User < ActiveRecord::Base
     close_rail
   end
 
-  def add_favorite_bus_stop
-    
+  def add_favorite_bus_stop(api_id)
+    user_stations.find_or_create_by(api_id: api_id)
+  end
+
+  def update_favorite_bus_stop(api_id, stop_name)
+    user_stations.find_by(api_id: api_id).update(name: stop_name)
   end
 
   def store_location lat, long
