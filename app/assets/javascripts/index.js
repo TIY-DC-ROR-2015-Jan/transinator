@@ -17,6 +17,9 @@ var getTemplates = function(){
   var railsString = $("#rails-template").text()
   templates.railsInfo = Handlebars.compile(railsString);
 
+  var railsDashString = $("#dash-rails-template").text();
+  templates.railsDashInfo = Handlebars.compile(railsDashString);
+
   var busString = $("#bus-template").text()
   templates.busInfo = Handlebars.compile(busString);
 
@@ -32,8 +35,7 @@ var MetroStation = Backbone.Model.extend({
 
     defaults: {
     name: "",
-    bikes: 0,
-    empty: 0,
+    railArrivalArray: []
     //id: 0
   	},
 
@@ -92,6 +94,22 @@ var MetroView = Backbone.View.extend({
 
 });
 
+
+var MetroDashView = Backbone.View.extend({
+
+  tagName: "div",
+
+  initialize: function(model) {
+  	this.model = model;
+    this.render();
+  },
+
+  render: function() {
+    this.$el.html(templates.railsDashInfo(this.model.viewDetails()));
+  },
+
+});
+
 var BusView = Backbone.View.extend({
 
   events: { "click #busFavorite": "markAsFavorite"},
@@ -144,34 +162,53 @@ var BikeDashView = Backbone.View.extend({
   },
 
 });
-/*
+
 var getRailResults = function(callback) {
     $.ajax({
       url: "/dashboard/rails.json",
       method: "GET",
       success: function(data) {
       	console.log(data);
-        //callback(data);
+        callback(data);
       }
     })
 }
 
-var displayRailResults = function(data) {
+var displayRailDashResults = function(data) {
 
-	_.each(data, function(element){
+	railsViews = [];
+
+	_.each(data.nearby_predictions, function(element){
 		element = new MetroStation({
-			name: element.name,
-			bikes: element.bikes,
-			empty: element.empty
-			//id: element.id
+			name: element.station_name,
+			railArrivalArray: element.rail_arrivals,
 		});
-		railsViews.push(new MetroView(element));
+		railsViews.push(new MetroDashView(element));
+		console.log(railsViews[0]);
 	});
 
     _.each(railsViews, function(element, index){
     $("#rails").append(railsViews[index].el);
     });
-}*/
+}
+
+var displayRailResults = function(data) {
+
+	railsViews = [];
+
+	_.each(data.nearby_predictions, function(element){
+		element = new MetroStation({
+			name: element.station_name,
+			railArrivalArray: element.rail_arrivals,
+		});
+		railsViews.push(new MetroView(element));
+		console.log(railsViews[0]);
+	});
+
+    _.each(railsViews, function(element, index){
+    $("#rails").append(railsViews[index].el);
+    });
+}
 
 var getBusResults = function(callback) {
     $.ajax({
@@ -297,6 +334,7 @@ $(document).ready(function(){
 	$("#refresh").click(function(){
 		getBikeResults(displayBikeDashResults);
 		getBusResults(displayBusResults);
+		getRailResults(displayRailDashResults);
 	});
 
 

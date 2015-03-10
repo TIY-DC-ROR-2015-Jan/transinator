@@ -19,8 +19,8 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="rails">
-				<script type="x-handlebars-template" id="rails-template">
+			<div class="cell" id="rails">
+				<script type="x-handlebars-template" id="dash-rails-template">
 					<div class="infoWrap">
 					<div class="row">
 						<div class="cell">
@@ -28,14 +28,23 @@
 						</div> 	
 					</div>
 
-					<div class="row">
-						<div class="cell columns2">
-							Bikes:{{bikes}} 
+					{{#each railArrivalArray}}
+					<div class="trainWrap">
+						<div class="row">
+							<div class="cell columns2">
+								Minutes Away: {{this.minutes_away}} 
+							</div> 
+							<div class="cell columns2">
+								Line:{{this.train_color}} 
+							</div>
+							<div class="row">
+								<div class="cell">
+									Destination:{{this.train_destination}} 
+								</div>
+							</div>
 						</div> 
-						<div class="cell columns2">
-							Empty:{{empty}} 
-						</div>
-					</div> 
+					</div>
+					{{/each}}
 					</div>
 				</script>	
 			</div>
