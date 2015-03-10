@@ -1,14 +1,16 @@
 var templates = {};
-var views = [];
+var bikeViews = [];
+var busViews = [];
+var railsViews = [];
 
-navigator.geolocation.getCurrentPosition( function(geoposition){
+/*navigator.geolocation.getCurrentPosition( function(geoposition){
 
    var latitude = geoposition.coords.latitude;
    var longitude = geoposition.coords.longitude;
    $("#longInput").val(longitude);
    $("#latInput").val(latitude);
 
-});
+});*/
 
 var getTemplates = function(){
 
@@ -27,8 +29,9 @@ var MetroStation = Backbone.Model.extend({
 
     defaults: {
     name: "",
-    location: "",
-    lines: ""
+    bikes: 0,
+    empty: 0,
+    //id: 0
   	},
 
   viewDetails: function() {
@@ -42,8 +45,9 @@ var BusStop = Backbone.Model.extend({
 
     defaults: {
     name: "",
-    location: "",
-    lines: ""
+    bikes: 0,
+    empty: 0,
+    //id: 0
   	},
 
   viewDetails: function() {
@@ -59,6 +63,7 @@ var BikeStation = Backbone.Model.extend({
     name: "",
     bikes: 0,
     empty: 0,
+    //id: 0
   	},
 
   viewDetails: function() {
@@ -70,9 +75,7 @@ var BikeStation = Backbone.Model.extend({
 
 var MetroView = Backbone.View.extend({
 
-  events: { "click .favorite": "markAsFavorite"},
-
-  tagName: "div",
+  tagName: "option",
 
   initialize: function(model) {
   	this.model = model;
@@ -80,18 +83,15 @@ var MetroView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(templates.railsInfo(this.model.viewDetails()));
+    this.$el.html(templates.bikeInfo(this.model.viewDetails()));
+    this.$el.attr("value", this.model.get('name')); //id
   },
-
-  markAsFavorite: function() {
-
-  }
 
 });
 
 var BusView = Backbone.View.extend({
 
-  events: { "click .favorite": "markAsFavorite"},
+  events: { "click #busFavorite": "markAsFavorite"},
 
   tagName: "div",
 
@@ -105,16 +105,15 @@ var BusView = Backbone.View.extend({
   },
 
   markAsFavorite: function() {
-  	
+  	console.log(this.model.get('name') + " was clicked");
+  	var busFavoriteID = this.model.get('name') //id
   }
 
 });
 
 var BikeView = Backbone.View.extend({
 
-  events: { "click .favorite": "markAsFavorite"},
-
-  tagName: "div",
+  tagName: "option",
 
   initialize: function(model) {
   	this.model = model;
@@ -123,19 +122,17 @@ var BikeView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(templates.bikeInfo(this.model.viewDetails()));
+    this.$el.attr("value", this.model.get('name')); //id
   },
-
-  markAsFavorite: function() {
-  	
-  }
 
 });
 
-/*var getRailResults = function(callback) {
+var getRailResults = function(callback) {
     $.ajax({
-      url: metro,
+      url: "/dashboard/bikes.json",
       method: "GET",
       success: function(data) {
+      	console.log(data);
         callback(data);
       }
     })
@@ -144,21 +141,27 @@ var BikeView = Backbone.View.extend({
 var displayRailResults = function(data) {
 
 	_.each(data, function(element){
-		element = new MetroStation;
-		views.push(new MetroView(element));
+		element = new MetroStation({
+			name: element.name,
+			bikes: element.bikes,
+			empty: element.empty
+			//id: element.id
+		});
+		railsViews.push(new MetroView(element));
 	});
 
-    _.each(views, function(element, index){
-    $("#rails").append(views[index].el);
+    _.each(railsViews, function(element, index){
+    $("#rails").append(railsViews[index].el);
     });
 }
 
 var getBusResults = function(callback) {
     $.ajax({
-      url: bus,
+      url: "/dashboard/bikes.json",
       method: "GET",
       success: function(data) {
         callback(data);
+        console.log(data);
       }
     })
 }
@@ -166,20 +169,26 @@ var getBusResults = function(callback) {
 var displayBusResults = function(data) {
 
 	_.each(data, function(element){
-		element = new BusStop;
-		views.push(new BusView(element));
+		element = new BusStop({
+			name: element.name,
+			bikes: element.bikes,
+			empty: element.empty
+			//id: element.id
+		});
+		busViews.push(new BusView(element));
 	});
 
-    _.each(views, function(element, index){
-    $("#bus").append(views[index].el);
+    _.each(busViews, function(element, index){
+    $("#bus").append(busViews[index].el);
     });
-}*/
+}
 
 var getBikeResults = function(callback) {
     $.ajax({
       url: "/dashboard/bikes.json",
       method: "GET",
       success: function(data) {
+      	console.log(data);
         callback(data);
       }
     })
@@ -192,14 +201,53 @@ var displayBikeResults = function(data) {
 			name: element.name,
 			bikes: element.bikes,
 			empty: element.empty
+			//id: element.id
 		});
-		views.push(new BikeView(element));
+		bikeViews.push(new BikeView(element));
 	});
 
-    _.each(views, function(element, index){
-    $("#bike").append(views[index].el);
+    _.each(bikeViews, function(element, index){
+    $("#bike").append(bikeViews[index].el);
     });
 }
+
+/*var sendFavoriteBike = function(selectedBikeStation) {
+	var urlString = "/dashboard/station/" + selectedBikeStation;
+
+	$.ajax({
+      url: urlString,
+      method: "POST",
+      data: selectedBikeStation,
+      success: function(data) {
+      	console.log(data);
+        //callback(data);
+      }
+    })
+}
+
+var sendFavoriteRail = function(selectedRailStation) {
+	$.ajax({
+      url: favorite rail,
+      method: "GET",
+      data: selectedRailStation,
+      success: function(data) {
+      	console.log(data);
+        callback(data);
+      }
+    })
+}
+
+var sendFavoriteBike = function(selectedBikeStation) {
+	$.ajax({
+      url: favorite bike,
+      method: "GET",
+      data: selectedBikeStation,
+      success: function(data) {
+      	console.log(data);
+        callback(data);
+      }
+    })
+}*/
 
 
 $(document).ready(function(){
@@ -207,11 +255,23 @@ $(document).ready(function(){
 	getTemplates();
 
 	$("#search").click(function(){
-	$("#resultsWrap").show();
-	//getRailResults(displayRailResults);
-	//getBusResults(displayBusResults);
+	//$("#resultsWrap").show();
+	getRailResults(displayRailResults);
+	getBusResults(displayBusResults);
 	getBikeResults(displayBikeResults);
 	});
+
+ 	$("#bikeFavorite").click(function() {
+  		var selectedBikeStation = $("#bike").val();
+  		console.log(selectedBikeStation);
+  		//sendFavoriteBike(selectedBikeStation);
+ 	});
+
+ 	$("#railsFavorite").click(function() {
+  		var selectedRailStation = $("#rails").val();
+  		console.log(selectedRailStation);
+  		//sendFavoriteRail(selectedRailStation);
+ 	});
 
 });
 

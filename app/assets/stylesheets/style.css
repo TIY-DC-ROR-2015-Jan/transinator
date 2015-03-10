@@ -72,6 +72,10 @@ header {
   	margin-bottom: 10px;
 }
 
+select {
+	margin: 15px;
+}
+
 .newStationWrap {
 	text-align: center;
 }
@@ -81,7 +85,6 @@ header {
 }
 
 .resultsWrap {
-	display: none;
 	text-align: center;
 }
 

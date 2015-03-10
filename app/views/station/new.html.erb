@@ -2,9 +2,7 @@
 	<h1>Add a new station to your dashboard</h1>
 
 	<div class="newStationsSearch">
-		<label>Longitude: <input type="text" id="longInput"/></label>
-		<label>Latitude: <input type="text" id="latInput"/></label>
-		<a href="#"><button id="search">Search</button></a>
+		<a href="#"><button id="search">Search Nearby</button></a>
 	</div>
 
 </div>
@@ -24,38 +22,25 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="rails">
-				<script type="x-handlebars-template" id="rails-template">
-					<div class="infoWrap">
-						<div class="row">
-							<div class="cell">
-								Station:{{name}}
-							</div> 	
-						</div>
-
-						<div class="row">
-							<div class="cell columns2">
-								Bikes:{{bikes}} 
-							</div> 
-							<div class="cell columns2">
-								Empty:{{empty}} 
-							</div>
-						</div> 
-
-						<div class="row">
-							<div class="center">
-								<a href="#"><button id="favorite">Save as favorite</button></a>
-							</div>
-						</div>
+				<div class="infoWrap">
+					<div class="center">
+						Station: <select id="rails">
+							<script type="x-handlebars-template" id="rails-template">
+								{{name}}
+							</script>		
+						</select>
 					</div>
-				</script>	
-			</div>
+				</div>
+
+				<div class="center">
+					<a href="#"><button id="railsFavorite">Save as favorite</button></a>
+				</div>
 		</div>
 	</div>
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell columns3" id="bus">
+			<div class="cell" id="bus">
 				<script type="x-handlebars-template" id="bus-template">
 					<div class="infoWrap">
 						<div class="row">
@@ -72,11 +57,8 @@
 								Empty:{{empty}} 
 							</div>
 						</div> 
-
-						<div class="row">
-							<div class="center">
-								<a href="#"><button id="favorite">Save as favorite</button></a>
-							</div>
+						<div class="center">
+							<a href="#"><button id="busFavorite" class="favorite">Save as favorite</button></a>
 						</div>
 					</div>
 				</script>	
@@ -86,34 +68,19 @@
 
 	<div class="cell columns3">
 		<div class="row">
-			<div class="cell" id="bike">
-				<script type="x-handlebars-template" id="bike-template">
-					
-					<div class="infoWrap">
-						<div class="row">
-							<div class="cell">
-								Station:{{name}}
-							</div> 	
-						</div>
-
-						<div class="row">
-							<div class="cell columns2">
-								Bikes:{{bikes}} 
-							</div> 
-							<div class="cell columns2">
-								Empty:{{empty}} 
-							</div>
-						</div> 
-
-						<div class="row">
-							<div class="center">
-								<a href="#"><button id="favorite">Save as favorite</button></a>
-							</div>
-						</div>
+				<div class="infoWrap">
+					<div class="center">
+						Station: <select id="bike">
+							<script type="x-handlebars-template" id="bike-template">
+								{{name}}
+							</script>		
+						</select>
 					</div>
-					
-				</script>	
-			</div>
+				</div>
+
+				<div class="center">
+					<a href="#"><button id="bikeFavorite">Save as favorite</button></a>
+				</div>
 		</div>
 	</div>
 
