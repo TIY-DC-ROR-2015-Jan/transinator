@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :stations, through: :user_stations
 
   DISTANCE = 2
+
   def get_close_bikes bikes
     close_bikes =[]
     bikes.each do |bike|
@@ -28,9 +29,11 @@ class User < ActiveRecord::Base
     close_rail
   end
 
-  def get_close_buses
-
+  def add_favorite_bus_stop
+    fail
   end
+
+
 
 
 end
