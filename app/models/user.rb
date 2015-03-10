@@ -18,5 +18,11 @@ class User < ActiveRecord::Base
     close_bikes
   end
 
+  def get_close_rails
+  end
+
+  def get_close_buses
+  end
+
 
 end
