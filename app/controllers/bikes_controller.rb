@@ -1,8 +1,13 @@
 class BikesController < ApplicationController
 
 def index
-  Bike.get_bike_stations
-  @bikes = current_user.get_close_bikes Bike.all
+  @bikes = Bike.all.map {|bike| bike}
 end
+
+def close
+  @bikes = current_user.get_close_bikes
+  render :index
+end
+
 
 end
