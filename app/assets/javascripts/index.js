@@ -23,6 +23,9 @@ var getTemplates = function(){
   var bikeString = $("#bike-template").text()
   templates.bikeInfo = Handlebars.compile(bikeString);
 
+  var bikeDashString = $("#dash-bike-template").text();
+  templates.bikeDashInfo = Handlebars.compile(bikeDashString);
+
 };
 
 var MetroStation = Backbone.Model.extend({
@@ -127,13 +130,28 @@ var BikeView = Backbone.View.extend({
 
 });
 
+var BikeDashView = Backbone.View.extend({
+
+  tagName: "div",
+
+  initialize: function(model) {
+  	this.model = model;
+    this.render();
+  },
+
+  render: function() {
+    this.$el.html(templates.bikeDashInfo(this.model.viewDetails()));
+  },
+
+});
+
 var getRailResults = function(callback) {
     $.ajax({
-      url: "/dashboard/bikes.json",
+      url: "/dashboard/rails.json",
       method: "GET",
       success: function(data) {
       	console.log(data);
-        callback(data);
+        //callback(data);
       }
     })
 }
@@ -161,7 +179,7 @@ var getBusResults = function(callback) {
       method: "GET",
       success: function(data) {
         callback(data);
-        console.log(data);
+        //console.log(data);
       }
     })
 }
@@ -185,7 +203,7 @@ var displayBusResults = function(data) {
 
 var getBikeResults = function(callback) {
     $.ajax({
-      url: "/dashboard/bikes.json",
+      url: "/dashboard/bikes/close.json",
       method: "GET",
       success: function(data) {
       	console.log(data);
@@ -211,6 +229,25 @@ var displayBikeResults = function(data) {
     });
 }
 
+var displayBikeDashResults = function(data) {
+
+	bikeViews = [];
+
+	_.each(data, function(element){
+		element = new BikeStation({
+			name: element.name,
+			bikes: element.bikes,
+			empty: element.empty
+			//id: element.id
+		});
+		bikeViews.push(new BikeDashView(element));
+	});
+
+    _.each(bikeViews, function(element, index){
+    $("#bikeDash").append(bikeViews[index].el);
+    });
+}
+
 /*var sendFavoriteBike = function(selectedBikeStation) {
 	var urlString = "/dashboard/station/" + selectedBikeStation;
 
@@ -220,7 +257,6 @@ var displayBikeResults = function(data) {
       data: selectedBikeStation,
       success: function(data) {
       	console.log(data);
-        //callback(data);
       }
     })
 }
@@ -253,6 +289,11 @@ var sendFavoriteBike = function(selectedBikeStation) {
 $(document).ready(function(){
 
 	getTemplates();
+
+	$("#dash").click(function(){
+		getBikeResults(displayBikeDashResults);
+	});
+
 
 	$("#search").click(function(){
 	//$("#resultsWrap").show();

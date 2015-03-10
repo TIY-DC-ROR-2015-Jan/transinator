@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
 def show
-  Bike.load_bikes
+  Bike.load_bike_stations
   
 end
 
