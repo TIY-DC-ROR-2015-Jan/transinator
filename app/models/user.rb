@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   has_many :user_stations
   has_many :stations, through: :user_stations
 
@@ -18,6 +19,7 @@ class User < ActiveRecord::Base
   end
 
 
+<<<<<<< HEAD
   def store_location lat, long
     update! lat: lat, long: long
   end
@@ -26,4 +28,6 @@ class User < ActiveRecord::Base
     user_stations.find_or_create_by(station_id: station_id)
   end
 
+=======
+>>>>>>> master
 end
