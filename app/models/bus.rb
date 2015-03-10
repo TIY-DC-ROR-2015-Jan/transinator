@@ -1,7 +1,7 @@
 class Bus < Station
   include HTTParty
 
-  BUSDISTANCE =  1610 #meters (almost 1 mile)
+  BUSDISTANCE =  805 #meters (almost .5 mile)
 
   def self.get_nearby_bus_stops(user)
     nearby_buses = HTTParty.get("https://api.wmata.com/Bus.svc/json/jStops?Lat=#{user.lat.to_f}&Lon=#{user.long.to_f}&Radius=#{BUSDISTANCE}&api_key=#{ENV["WMATA_APIKEY"]}")
