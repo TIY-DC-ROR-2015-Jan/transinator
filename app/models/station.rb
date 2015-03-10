@@ -12,4 +12,8 @@ class Station < ActiveRecord::Base
     distance = Haversine.distance(user_lat, user_long, station_lat, station_long)
   end
 
+  def self.get_all_rail_db
+    Station.where(type: "Rail")
+  end
+
 end
