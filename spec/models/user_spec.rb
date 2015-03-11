@@ -10,11 +10,11 @@ RSpec.describe User, type: :model do
     expect(bikes.count).not_to eq 0
   end
 
-  it "get close rails" do
-    Rail.get_all_rail_stations
-    rails = @user.get_close_rails Rail.all
-    expect(rails.count).not_to eq 0
-  end
+  # it "get close rails" do
+  #   Rail.get_all_rail_stations
+  #   rails = @user.get_close_rails Rail.all
+  #   expect(rails.count).not_to eq 0
+  # end
 
   it "adds and deletes favorite station" do
     station = Station.create
