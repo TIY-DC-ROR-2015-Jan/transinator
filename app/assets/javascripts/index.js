@@ -38,8 +38,8 @@ var MetroStation = Backbone.Model.extend({
 
     defaults: {
     name: "",
-    railArrivalArray: []
-    //id: 0
+    railArrivalArray: [],
+    api_id: 0
   	},
 
   viewDetails: function() {
@@ -55,7 +55,8 @@ var BusStop = Backbone.Model.extend({
    		name: "",
 		directionText: "",
 		minutes: 0,
-		routeID: ""
+		routeID: "",
+		api_id: 0
   	},
 
   viewDetails: function() {
@@ -92,7 +93,7 @@ var MetroView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(templates.bikeInfo(this.model.viewDetails()));
-    this.$el.attr("value", this.model.get('name')); //id
+    this.$el.attr("value", this.model.get('api_id')); //id
   },
 
 });
@@ -124,7 +125,7 @@ var BusView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(templates.busInfo(this.model.viewDetails()));
-    //this.$el.attr("value", this.model.get('id')); //id
+    this.$el.attr("value", this.model.get('api_id'));
   },
 
 });
@@ -187,13 +188,14 @@ var getRailResults = function(callback) {
 }
 
 var displayRailDashResults = function(data) {
-
+	      	console.log(data.favorite_predictions);
 	railsViews = [];
 	railsFavs = [];
 
 	_.each(data.nearby_predictions, function(element){
 		element = new MetroStation({
 			name: element.station_name,
+			api_id: element.api_id,
 			railArrivalArray: element.rail_arrivals,
 		});
 		railsViews.push(new MetroDashView(element));
@@ -204,17 +206,19 @@ var displayRailDashResults = function(data) {
     });
 
 
-    /*_.each(data.nearby_predictions, function(element){
+    _.each(data.favorite_predictions, function(element){
 		element = new MetroStation({
 			name: element.station_name,
+			api_id: element.api_id,
 			railArrivalArray: element.rail_arrivals,
 		});
+
 		railsFavs.push(new MetroDashView(element));
 	});
 
     _.each(railsFavs, function(element, index){
     $("#favoriteRailsDash").append(railsFavs[index].el);
-    });*/
+    });
 }
 
 var displayRailResults = function(data) {
@@ -224,6 +228,7 @@ var displayRailResults = function(data) {
 	_.each(data.nearby_predictions, function(element){
 		element = new MetroStation({
 			name: element.station_name,
+			api_id: element.api_id,
 			railArrivalArray: element.rail_arrivals,
 		});
 		railsViews.push(new MetroView(element));
@@ -256,6 +261,7 @@ var displayBusDashResults = function(data) {
 		if (element.stop_name && element.predictions.length > 0) {
 		element = new BusStop({
 			name: element.stop_name,
+			api_id: element.api_id,
 			directionText: element.predictions[0].direction_text,	
 			minutes: element.predictions[0].minutes,
 			routeID: element.predictions[0].route_id
@@ -269,11 +275,12 @@ var displayBusDashResults = function(data) {
     $("#bus").append(busViews[index].el);
     });
 
-    /*_.each(data.nearby_arrivals, function(element, index){
+    _.each(data.favorite_arrivals, function(element, index){
 
 		if (element.stop_name && element.predictions.length > 0) {
 		element = new BusStop({
 			name: element.stop_name,
+			api_id: element.api_id,
 			directionText: element.predictions[0].direction_text,	
 			minutes: element.predictions[0].minutes,
 			routeID: element.predictions[0].route_id
@@ -285,7 +292,7 @@ var displayBusDashResults = function(data) {
 
     _.each(busFavs, function(element, index){
     $("#favoriteBus").append(busFavs[index].el);
-    });*/
+    });
 }
 
 var displayBusResults = function(data) {
@@ -295,6 +302,7 @@ var displayBusResults = function(data) {
 		if (element.stop_name && element.predictions.length > 0) {
 		element = new BusStop({
 			name: element.stop_name,
+			api_id: element.api_id,
 			directionText: element.predictions[0].direction_text,	
 			minutes: element.predictions[0].minutes,
 			routeID: element.predictions[0].route_id
@@ -385,7 +393,7 @@ var sendFavoriteBike = function(selectedBikeStation) {
     })
 }
 
-var sendFavoriteRail = function(selectedRailStation) {
+var sendFavoriteRail = function(selectedRailStation) {	//just realized I could've written these only once
 
 	var id = selectedRailStation;
 
@@ -395,6 +403,9 @@ var sendFavoriteRail = function(selectedRailStation) {
       data: {id: id},
       success: function(data) {
       	alert("added metro station to favorites");
+      },
+      error: function() {
+      	console.log("didn't add metro to favorites")
       }
     })
 }
