@@ -13,6 +13,8 @@ RSpec.describe "routes for dashboard", :type => :routing do
     it "routes /dashboard/station/:id to dashboard create" do
       expect(post("/dashboard/station")).to route_to("station#create")
     end
+
+    
   end
 
 end
