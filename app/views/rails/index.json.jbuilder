@@ -14,6 +14,8 @@ if @rail_favorites["statusCode"] != 404
       json.minutes_away train["Min"]
     end
   end
+else
+  json.favorite_predictions []
 end
 
 get_trains = @near_rail_info["Trains"]
