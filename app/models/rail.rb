@@ -3,7 +3,6 @@ class Rail < Station
 
   def self.get_all_rail_stations
     all_stations = HTTParty.get("https://api.wmata.com/Rail.svc/json/jStations?LineCode&api_key=#{ENV["WMATA_APIKEY"]}")
-    binding.pry
     all_stations["Stations"].each do |station|
       s = Station.find_or_create_by(api_id: station["Code"])
       s.update!(type: "Rail", name: station["Name"], lat: station["Lat"], long: station["Lon"])
