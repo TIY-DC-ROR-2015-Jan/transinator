@@ -1,8 +1,10 @@
 class DashboardController < ApplicationController
 
 def show
-  Rail.get_all_rail_stations
+
   Bike.load_bike_stations
+  Rail.get_all_rail_stations
+
 end
 
 

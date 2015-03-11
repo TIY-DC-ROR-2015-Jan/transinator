@@ -1,0 +1,154 @@
+
+<div class="row center">
+		<h1>Dashboard</h1>
+		<a href="#"><button id="refresh">Refresh</button></a>
+</div>
+
+<div class="row center">
+		<h1>Favorites</h1>
+</div>
+
+<div id="favoritesWrap" class="resultsWrap">
+
+	<div class="row center">
+
+		<div class="cell columns3">Metro Stations</div>
+
+		<div class="cell columns3">Bus Stations</div>
+
+		<div class="cell columns3">Bike Stations</div>
+
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="favoriteRailsDash">
+				<script type="x-handlebars-template" id="dash-rails-template">
+					<div class="infoWrap">
+					<div class="row">
+						<div class="cell">
+							Station:{{name}}
+						</div> 	
+					</div>
+
+					{{#each railArrivalArray}}
+					<div class="trainWrap">
+						<div class="row">
+							<div class="cell columns2">
+								Minutes Away: {{this.minutes_away}} 
+							</div> 
+							<div class="cell columns2">
+								Line:{{this.train_color}} 
+							</div>
+							<div class="row">
+								<div class="cell">
+									Destination:{{this.train_destination}} 
+								</div>
+							</div>
+						</div> 
+					</div>
+					{{/each}}
+					</div>
+				</script>	
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="favoriteBus">
+				<script type="x-handlebars-template" id="dash-bus-template">
+					<div class="infoWrap">
+						<div class="row">
+							<div class="cell">
+								Stop: {{name}}
+							</div> 	
+						</div>
+
+						<div class="row">
+							<div class="cell">
+								Direction: {{directionText}} 
+							</div> 
+						</div> 
+						<div class="row">
+							<div class="cell columns2">
+								Minutes: {{minutes}} 
+							</div>
+							<div class="cell columns2">
+								Route: {{routeID}} 
+							</div>
+						</div>
+					</div>
+				</script>	
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="favoriteBikeDash">
+				<script type="x-handlebars-template" id="dash-bike-template">
+					
+					<div class="infoWrap">
+					<div class="row">
+						<div class="cell">
+							Station: {{name}}
+						</div> 	
+					</div>
+
+					<div class="row">
+						<div class="cell columns2">
+							Bikes: {{bikes}} 
+						</div> 
+						<div class="cell columns2">
+							Empty: {{empty}} 
+						</div>
+					</div> 
+					</div>
+					
+				</script>	
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="row center">
+		<h1>Nearby</h1>
+</div>
+
+<div id="resultsWrap" class="resultsWrap">
+
+	<div class="row center">
+
+		<div class="cell columns3">Metro Stations</div>
+
+		<div class="cell columns3">Bus Stations</div>
+
+		<div class="cell columns3">Bike Stations</div>
+
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="rails">
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="bus">
+			</div>
+		</div>
+	</div>
+
+	<div class="cell columns3">
+		<div class="row">
+			<div class="cell" id="bikeDash">
+			</div>
+		</div>
+	</div>
+
+</div>
+
